@@ -17,4 +17,12 @@ class QuestionDAO{
         return $result;
 
     }
+    public function getQuestions(){
+    $query = "SELECT * FROM question";
+    $stmt = $this->db->prepare($query);
+    $stmt->execute();
+    $result = $stmt->fetchAll();
+    return $result;
+    }
+
 }
