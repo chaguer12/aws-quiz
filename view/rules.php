@@ -1,6 +1,7 @@
 <?php
 include '../controller/session.php';
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +16,7 @@ include '../controller/session.php';
 <body>
     <header >
         <div class="w-3/4 mx-auto  mt-4  bg-gray-200 rounded-full ">
-            <div id="progress_bar" class="h-full bg-yellow-400" style="width:10%;min-height: 10px;">
+            <div id="progress_bar" class="h-full bg-yellow-400" style="width:15%;min-height: 10px;">
 
             </div>
             
@@ -23,7 +24,7 @@ include '../controller/session.php';
 
     </header>
     <section class="flex items-center justify-center min-h-full my-16">
-        <form action="controller/session.php" onsubmit="updateProgress()" method="post" enctype="multipart/form-data " class="bg-white p-8 rounded shadow-lg max-w-md w-full ">
+        <form action="controller/session.php"  method="post" enctype="multipart/form-data " class="bg-white p-8 rounded shadow-lg max-w-md w-full ">
 
             <h1 class="font-serif text-xl text-center mb-6">Welcome <?php echo $_SESSION['user_name'];?></h1>
             <h2 class="font-serif text-lg ">Rules:</h2>
@@ -60,7 +61,7 @@ include '../controller/session.php';
       
     </section>
     
-
-    
+<script src="javascript/progress.js"></script>
+<script> updateProgressBar(20)</script>
 </body>
 </html>

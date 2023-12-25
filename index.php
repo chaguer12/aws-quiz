@@ -1,4 +1,9 @@
+<?php
+include 'controller/logic.php';
 
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +29,7 @@
     </header>
 
     <section class="flex items-center justify-center min-h-full my-16">
-        <form action="controller/session.php" onsubmit="updateProgress()" method="post" enctype="multipart/form-data " class="bg-white p-8 rounded shadow-lg max-w-md w-full">
+        <form action="controller/session.php"  method="post" enctype="multipart/form-data " class="bg-white p-8 rounded shadow-lg max-w-md w-full">
 
             <h1 class="font-serif text-2xl text-center mb-6">Dear Participant</h1>
             <div>
