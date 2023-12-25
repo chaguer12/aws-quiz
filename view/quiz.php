@@ -23,9 +23,64 @@ include '../controller/session.php';
 </header>
 <body>
 <section class="flex items-center justify-center min-h-full  my-16">
-<form action="controller/session.php"  method="post" enctype="multipart/form-data " class="bg-white p-8 rounded shadow-lg max-w-md w-full ">
-</form>
-</section>
+<div class="bg-white p-8 rounded shadow-lg w-3/4 my-8">
+    <div class="flex justify-between ">
+    <p class="font-mono mt-4">theme: <span class="text-sm font-mono text-gray-500">tst</span></p>
+    <p class="font-mono mt-4 text-lg" id="countdown">30s</p> 
+    <img src="images/logo.png" class="w-16 h-16">
+    </div>
+    <h1 class="text-center font-mono text-3xl font-semibold p-2">question sdjqfhldkfj skdfjqkljhds fsdjfl</h1>
+   <form action="../controller/logic.php">
+   <div>
+        <ul class="grid grid-cols-2 gap-4  max-w-2xl mx-auto text-center mt-8">
+            <li class="px-4 font-mono">
+                <div>
+                <input type="radio" name="response"  value="">
+                c) Amazon EC2 instances can be launched on demand when needed.
+                
+            </div>
+        </li>
+            <li class="px-4 font-mono">
+                <div>
+                <input type="radio" name="response"  value="">
+                c) Amazon EC2 instances can be launched on demand when needed.
+                
+            </div>
+        </li>
+            <li class="px-4 font-mono">
+                <div>
+                <input type="radio" name="response" value="">
+                c) Amazon EC2 instances can be launched on demand when needed.
+                
+            </div>
+        </li>
+            <li class="px-4 font-mono">
+                <div>
+                <input type="radio" name="response" value="">
+                c) Amazon EC2 instances can be launched on demand when needed.
+                
+            </div>
+        </li>
+            
+        </ul>
+        
+    </div>
+    <div class="flex justify-between mt-8">
+        <p class="font-mono">
+            score:
+        </p>
+        <button id="next" type="submit"  class=" text-white bg-yellow-600 p-2 w-28 rounded-xl border border-yellow-600 hover:bg-white hover:text-yellow-600">
+            Next
+        </button>
+    </div>
+   </form>
+
+
     
+</div>
+</section>
+<script src="javascript/timer.js"></script>
+<script src="javascript/progress.js"></script>
+<script> updateProgressBar(24)</script>  
 </body>
 </html>

@@ -43,7 +43,7 @@ include 'controller/logic.php';
 
             <div class="mt-6">
                 <button type="submit" name="start" class="w-full px-4 py-2 text-white bg-yellow-500 rounded hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-opacity-50">
-                    Start Quiz!
+                  Start Quiz!
                 </button>
 
             </div>
@@ -61,6 +61,7 @@ include 'controller/logic.php';
 
    
 <script src="view/javascript/progress.js"></script>
+<script> updateProgressBar(10)</script>
 </body>
 
 </html>

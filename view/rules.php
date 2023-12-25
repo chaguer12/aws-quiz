@@ -24,7 +24,7 @@ include '../controller/session.php';
 
     </header>
     <section class="flex items-center justify-center min-h-full my-16">
-        <form action="controller/session.php"  method="post" enctype="multipart/form-data " class="bg-white p-8 rounded shadow-lg max-w-md w-full ">
+        <div class="bg-white p-8 rounded shadow-lg max-w-md w-full ">
 
             <h1 class="font-serif text-xl text-center mb-6">Welcome <?php echo $_SESSION['user_name'];?></h1>
             <h2 class="font-serif text-lg ">Rules:</h2>
@@ -52,11 +52,13 @@ include '../controller/session.php';
                 </li>
             </ul>
             <button type="submit" name="go" class="w-full px-4 py-2 my-6 text-white bg-yellow-500 rounded hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-opacity-50">
-                    Start Quiz!
-                </button>
+                <a href="quiz.php">
+                   Agree
+                </a>
+            </button>
                    
 
-        </form>
+        </div>
         
       
     </section>
