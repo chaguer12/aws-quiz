@@ -6,11 +6,18 @@ function updateTime(){
         counDownEl.innerHTML=startingTime + "s";
         startingTime--;
         if(startingTime==0){
-            // document.getElementById("next").click();
-            startingTime = 30;
+               document.getElementById("next").click();
+              startingTime = 30;
         }
 
     },1000) 
 }
+
+function getNextQuestion(){
+
+}
+
+
+
 
 updateTime();   

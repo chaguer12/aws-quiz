@@ -3,7 +3,7 @@ class Theme{
     private $theme_id;
     private $theme_name;
 
-    public function __construct($theme_id,$theme_name){
+    public function __construct($theme_id= null,$theme_name = null){
         $this->theme_id=$theme_id;
         $this->theme_name=$theme_name;
     }

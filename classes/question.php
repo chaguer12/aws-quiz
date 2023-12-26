@@ -1,15 +1,18 @@
 <?php
+include 'theme.php';
 class Question{
     private $question_ID;
     private $question;
     private $description;
-    private $id_theme;
+    private Theme $theme;
 
-    public function __construct($questionID,$question,$description,$id_theme) {
-        $this->question_ID = $questionID;
+    public function __construct($question_ID = null,$question = null ,$description = null ,Theme $theme = null) {
+        $this->question_ID = $question_ID;
         $this->question = $question;
         $this->description = $description;
-        $this->id_theme = $id_theme;
+        $this->theme = new Theme();
+        
+
         
     }
     public function getQuestionID(){
@@ -22,8 +25,21 @@ class Question{
         return $this->description;
     }
     public function getIdTheme(){
-        return $this->id_theme;
+        return $this->theme;
     }
+    public function setQuestionID($question_id){
+        $this->question_ID = $question_id;
+    }
+    public function setDescription($description){
+        $this->description = $description;
+    }
+    public function setQuestion($question){
+        $this->question = $question;
+    }
+    public function setIdTheme(Theme $theme){
+        $this->theme = $theme;
+    }
+
     
     
     
