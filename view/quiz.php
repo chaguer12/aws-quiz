@@ -1,8 +1,5 @@
 <?php
-require_once('../controller/qstController.php');
-include '../controller/session.php';
-$questionsCTRL = new QstController();
-$getQst = $questionsCTRL->DisplayQuestions();
+
 
 
 ?>
@@ -37,12 +34,21 @@ $getQst = $questionsCTRL->DisplayQuestions();
     <p class="font-mono mt-4 text-lg" id="countdown">30s</p> 
     <img src="images/logo.png" class="w-16 h-16">
     </div>
-    <?php
+   
+<div id="displayQ">
 
+</div>
+
+
+   <?php
+require_once('../controller/qstController.php');
+include '../controller/session.php';
+$questionsCTRL = new QstController();
+$getQst = $questionsCTRL->DisplayQuestions();
 foreach($getQst as $q){
-?>
-    <h1 class="text-center font-mono text-3xl font-semibold p-2"><?php echo $q->getQuestion(); }?></h1>
-   <form action="../controller/logic.php" method="POST">
+    ?>
+        <h1 data-id="<?php echo $q->getQuestionID(); ?>" class="question text-center font-mono text-3xl font-semibold p-2"><?php echo $q->getQuestion(); }?></h1>
+    
    
    <div>
         <ul class="grid grid-cols-2 gap-4  max-w-2xl mx-auto text-center mt-8">
@@ -82,11 +88,11 @@ foreach($getQst as $q){
         <p class="font-mono">
             
         </p>
-        <button id="next" type="submit" name="next" class=" text-white bg-yellow-600 p-2 w-28 rounded-xl border border-yellow-600 hover:bg-white hover:text-yellow-600">
+        <button id="next" onclick="test(); updateTime();" name="next" class=" text-white bg-yellow-600 p-2 w-28 rounded-xl border border-yellow-600 hover:bg-white hover:text-yellow-600">
             Next
         </button>
     </div>
-   </form>
+
 
 
     

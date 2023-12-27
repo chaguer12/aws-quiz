@@ -6,18 +6,45 @@ function updateTime(){
         counDownEl.innerHTML=startingTime + "s";
         startingTime--;
         if(startingTime==0){
-               document.getElementById("next").click();
-              startingTime = 30;
+            
+           
+            document.getElementById("next").click(); 
+           startingTime = 30;
         }
 
     },1000) 
 }
+const displayQ = document.querySelector("#displayQ");
+let question = document.querySelectorAll(".question");
+let array = [].slice.call(question);
+let counter = 0;
+array.forEach(function(element){
+    element.style.display = 'none';
 
-function getNextQuestion(){
-
-}
-
+})
+array[counter].style.display = 'block';
 
 
 
-updateTime();   
+var nextbutton = document.getElementById("next");
+var Co = 1;
+function test () {
+    
+    array.forEach(function(element){
+        element.style.display = 'none';
+    })
+
+    array[Co].style.display = "block";
+    Co++;
+    
+ 
+  }
+
+  
+
+
+
+
+
+
+

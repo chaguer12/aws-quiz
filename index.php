@@ -61,7 +61,7 @@
 
    
 <script src="view/javascript/progress.js"></script>
-<script> updateProgressBar(10)</script>
+<script> updateProgressBar()</script>
 </body>
 
 </html>

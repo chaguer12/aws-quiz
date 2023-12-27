@@ -8,5 +8,5 @@ function updateProgressBar(percentage) {
 document.addEventListener('DOMContentLoaded', (event) => {
     
     
-    updateProgressBar(userProgress);
+    updateProgressBar() ;
 });

@@ -32,4 +32,22 @@ class ChoiceDAO{
         
 
 }
+
+    public function correctAnswer($question_id){
+        $query = "SELECT * FROM choice WHERE ID_Question = :questionID AND status = 1";
+        $stmt = $this->db->prepare($query);
+        $stmt->bindParam(":questionID", $question_id);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        if($result['Choice_ID'] == $question_id ){
+            return;
+
+        }else{
+
+        }
+        
+
+
+
+    }
 }

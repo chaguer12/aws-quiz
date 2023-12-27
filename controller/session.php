@@ -7,6 +7,14 @@ if(isset($_POST['start'])){
 
 
 }
+function Scoring(){
+    $points = 100;
+    $score = 0;
+    $score = $points +$score;
+    $score = $_SESSION['user_score'];
+    return $score;
+
+} 
 
 
 

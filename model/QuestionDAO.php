@@ -28,23 +28,15 @@ class QuestionDAO
         
         $qst= array();
         foreach($result as $question){
-            $qst[] = new Question($question->Question_ID,$question->Question_Asked,$question->Description);
-
-            
+            $qst[] = new Question($question->Question_ID,$question->Question_Asked,$question->Description);           
         }
         shuffle($qst);
+        
         return $qst;
-        // foreach($result as $row){
-        //         $questions = new Question();
-        //         $questions->setQuestionID($row['Question_ID']);
-        //         $questions->setDescription($row['Description']);
-        //         $questions->setQuestion($row['Question_Asked']);
-        //         $questions->setIdTheme($row['ID_Theme']);
-        //         array_push($qst,$questions);
 
-        // }       
-        // return $qst;
 }
+
+
 }
 
 
