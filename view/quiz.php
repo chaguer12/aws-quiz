@@ -59,27 +59,9 @@ foreach($getQst as $q){
                 
             </div>
         </li>
-            <li class="px-4 font-mono">
-                <div>
-                <input type="radio" name="response"  value="">
-                c) Amazon EC2 instances can be launched on demand when needed.
-                
-            </div>
-        </li>
-            <li class="px-4 font-mono">
-                <div>
-                <input type="radio" name="response" value="">
-                c) Amazon EC2 instances can be launched on demand when needed.
-                
-            </div>
-        </li>
-            <li class="px-4 font-mono">
-                <div>
-                <input type="radio" name="response" value="">
-                c) Amazon EC2 instances can be launched on demand when needed.
-                
-            </div>
-        </li>
+            
+       
+      
             
         </ul>
         

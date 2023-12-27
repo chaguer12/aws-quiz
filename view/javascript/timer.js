@@ -1,3 +1,5 @@
+// const { get } = require("http");
+
 let startingTime = 30;
 const counDownEl = document.getElementById("countdown");
 function updateTime(){
@@ -16,13 +18,25 @@ function updateTime(){
 }
 const displayQ = document.querySelector("#displayQ");
 let question = document.querySelectorAll(".question");
+
 let array = [].slice.call(question);
 let counter = 0;
 array.forEach(function(element){
     element.style.display = 'none';
-
 })
+
 array[counter].style.display = 'block';
+
+function getid() { 
+    array.forEach(function (param) {
+        if(param.style.display == 'block') {
+            let id = param.getAttribute("data-id");
+            console.log(id);
+        }
+      });
+ }
+
+ getid();
 
 
 
@@ -37,6 +51,7 @@ function test () {
     array[Co].style.display = "block";
     Co++;
     
+    getid();
  
   }
 
