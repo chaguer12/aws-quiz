@@ -41,24 +41,30 @@
 
 
    <?php
+require_once('../controller/choiceController.php');
 require_once('../controller/qstController.php');
 include '../controller/session.php';
 $questionsCTRL = new QstController();
 $getQst = $questionsCTRL->DisplayQuestions();
 foreach($getQst as $q){
+    $answerModel = new ChoiceCTRL();
+    $questionId = $q->getQuestionID();
+    $answers = $answerModel->DisplayChoices($questionId);
     ?>
         <h1 data-id="<?php echo $q->getQuestionID(); ?>" class="question text-center font-mono text-3xl font-semibold p-2"><?php echo $q->getQuestion(); }?></h1>
     
    
    <div>
         <ul class="grid grid-cols-2 gap-4  max-w-2xl mx-auto text-center mt-8">
-            <li class="px-4 font-mono">
+            <?php foreach($answers as $answer){ ?>
+        <li class="px-4 font-mono">
                 <div>
-                <input type="radio" name="response"  value="">
-                c) Amazon EC2 instances can be launched on demand when needed.
+                <input type="radio" name="response"  value="<?php echo $answer->Choice_ID ?>">
+                <?= $answer->Choice_Name ?>
                 
             </div>
         </li>
+        <?php }?>
             
        
       

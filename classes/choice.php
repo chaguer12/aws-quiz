@@ -5,7 +5,7 @@ class Choice{
     private $status;
     private $question_id;
 
-    public function __construct($choice_id, $choice_name, $status, $question_id){
+    public function __construct($choice_id=null, $choice_name=null, $status=null, $question_id=null){
     $this->choice_id = $choice_id;
     $this->choice_name = $choice_name;
     $this->status = $status;
