@@ -51,7 +51,7 @@ include '../controller/session.php';
 
                 </li>
             </ul>
-            <button type="submit" name="go" class="w-full px-4 py-2 my-6 text-white bg-yellow-500 rounded hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-opacity-50">
+            <button name="go" class="w-full px-4 py-2 my-6 text-white bg-yellow-500 rounded hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-opacity-50">
                 <a href="quiz.php">
                    Agree
                 </a>

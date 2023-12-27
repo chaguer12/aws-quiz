@@ -1,23 +1,26 @@
-// const { get } = require("http");
 
-let startingTime = 30;
+
+
+const displayQ = document.querySelector("#displayQ");
+let question = document.querySelectorAll(".question");
 const counDownEl = document.getElementById("countdown");
+let seconds;
 function updateTime(){
-   
-    startingTime.innerHTML = setInterval(()=>{
+    let startingTime = 30;
+    seconds = setInterval(()=>{
         counDownEl.innerHTML=startingTime + "s";
         startingTime--;
         if(startingTime==0){
             
            
-            document.getElementById("next").click(); 
-           startingTime = 30;
+            clearInterval(seconds);
+            document.getElementById("next").click();
         }
 
     },1000) 
 }
-const displayQ = document.querySelector("#displayQ");
-let question = document.querySelectorAll(".question");
+
+
 
 let array = [].slice.call(question);
 let counter = 0;
@@ -43,6 +46,7 @@ function getid() {
 var nextbutton = document.getElementById("next");
 var Co = 1;
 function test () {
+    clearInterval(seconds);
     
     array.forEach(function(element){
         element.style.display = 'none';
@@ -50,11 +54,11 @@ function test () {
 
     array[Co].style.display = "block";
     Co++;
-    
+    updateTime();
     getid();
  
   }
-
+  updateTime();
   
 
 

@@ -55,7 +55,26 @@
       
     </section>
     <footer>
-    <!-- component -->
+    <div class="flex justify-center mx-auto w-1/4 ">
+    <div class="w-10 mx-auto  mt-4  bg-gray-200 rounded-full ">
+            <div  class="h-full bg-yellow-400 rounded-full" style="width:100%;min-height: 10px;"> </div>
+            
+        </div>
+    <div class="w-10 mx-auto  mt-4  bg-gray-200 rounded-full  ">
+            <div  class="h-full bg-yellow-400 rounded-full" style="width:0%;min-height: 10px;">
+
+            </div>
+            
+        </div>
+    <div class="w-10 mx-auto  mt-4  bg-gray-200 rounded-full ">
+            <div  class="h-full bg-yellow-400 rounded-full" style="width:0%;min-height: 10px;">
+
+            </div>
+            
+        </div>
+
+    </div>
+ 
      
 </footer>
 

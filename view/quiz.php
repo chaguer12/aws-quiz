@@ -31,7 +31,7 @@
 <div class="bg-white p-8 rounded shadow-lg w-3/4 my-8">
     <div class="flex justify-between ">
     <p class="font-mono mt-4">theme: <span class="text-sm font-mono text-gray-500">tst</span></p>
-    <p class="font-mono mt-4 text-lg" id="countdown">30s</p> 
+    <p class="font-mono mt-4 text-lg" id="countdown">30s</p>    
     <img src="images/logo.png" class="w-16 h-16">
     </div>
    
@@ -79,7 +79,7 @@ foreach($getQst as $q){
         <p class="font-mono">
             
         </p>
-        <button id="next" onclick="test(); updateTime();" name="next" class=" text-white bg-yellow-600 p-2 w-28 rounded-xl border border-yellow-600 hover:bg-white hover:text-yellow-600">
+        <button id="next" onclick="test()" name="next" class=" text-white bg-yellow-600 p-2 w-28 rounded-xl border border-yellow-600 hover:bg-white hover:text-yellow-600">
             Next
         </button>
     </div>
