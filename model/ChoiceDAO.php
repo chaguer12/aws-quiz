@@ -15,10 +15,10 @@ class ChoiceDAO{
         return  $stmt->fetchAll(PDO::FETCH_OBJ);        
 
     }
-    public function checkChoice($question_id){
-        $query = "SELECT * FROM choice WHERE ID_Question = :question_id";
+    public function checkChoice($choice_id){
+        $query = "SELECT * FROM choice WHERE ID_Question = :choice_id";
         $stmt = $this->db->prepare($query);
-        $stmt->bindParam(":question_id", $question_id);
+        $stmt->bindParam(":choice_id", $question_id);
         $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         if($result['status'] == 2){

@@ -10,5 +10,8 @@ class ChoiceCTRL{
     public function DisplayChoices($question_id){
        return $this->choices->getChoices($question_id);
     }
+    public function CheckAnswer($choice_id){
+        return $this->choices->checkChoice();
+    }
 
 }

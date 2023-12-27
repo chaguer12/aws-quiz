@@ -56,7 +56,10 @@ foreach($getQst as $q){
    
    <div>
         <ul class="grid grid-cols-2 gap-4  max-w-2xl mx-auto text-center mt-8">
-            <?php foreach($answers as $answer){ ?>
+            <?php
+             foreach($answers as $answer){                
+                ?>
+                
         <li class="px-4 font-mono">
                 <div>
                 <input type="radio" name="response"  value="<?php echo $answer->Choice_ID ?>">
