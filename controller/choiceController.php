@@ -11,7 +11,7 @@ class ChoiceCTRL{
        return $this->choices->getChoices($question_id);
     }
     public function CheckAnswer($choice_id){
-        return $this->choices->checkChoice();
+        return $this->choices->checkChoice($choice_id);
     }
 
 }
