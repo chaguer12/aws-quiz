@@ -51,7 +51,7 @@ foreach($getQst as $q){
     $questionId = $q->getQuestionID();
     $answers = $answerModel->DisplayChoices($questionId);
     ?>
-        <h1 data-id="<?php echo $q->getQuestionID(); ?>" class="question text-center font-mono text-3xl font-semibold p-2"><?php echo $q->getQuestion(); }?></h1>
+        <h1 data-id="<?php echo $q->getQuestionID(); ?>" class="question text-center font-mono text-3xl font-semibold p-2"><?php echo $q->getQuestion(); ?></h1>
     
    
    <div>
@@ -67,7 +67,7 @@ foreach($getQst as $q){
                 
             </div>
         </li>
-        <?php }?>
+        <?php }}?>
             
        
       
@@ -79,7 +79,7 @@ foreach($getQst as $q){
         <p class="font-mono">
             
         </p>
-        <button id="next" onclick="test()" name="next" class=" text-white bg-yellow-600 p-2 w-28 rounded-xl border border-yellow-600 hover:bg-white hover:text-yellow-600">
+        <button id="next" onclick="test();DisplayAnswers();" name="next" class=" text-white bg-yellow-600 p-2 w-28 rounded-xl border border-yellow-600 hover:bg-white hover:text-yellow-600">
             Next
         </button>
     </div>
